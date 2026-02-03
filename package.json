@@ -17,7 +17,8 @@
     "url": "https://github.com/matthewtoast/Array2D.js.git"
   },
   "scripts": {
-    "build": "tsup Array2D.js --format iife,esm,cjs --minify --clean"
+    "build": "tsup Array2D.js --format iife,esm,cjs --minify --clean --dts --global-name Array2D",
+    "release": "npm run build && yalc publish --push"
   },
   "author": "Matthew Trost",
   "license": "MIT",
