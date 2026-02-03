@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "tsup Array2D.js --format iife,esm,cjs --minify --clean --dts --global-name Array2D",
-    "release": "npm run build && yalc publish --push"
+    "release": "npm run build && yalc publish && yalc push --sig"
   },
   "author": "Matthew Trost",
   "license": "MIT",

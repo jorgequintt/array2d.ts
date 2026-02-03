@@ -1093,8 +1093,8 @@
     if (w1 !== w2) return false;
     if (h1 !== h2) return false;
 
-    for (let i = 0; i < w1; i++) {
-      for (let j = 0; j < h1; j++) {
+    for (let i = 0; i < h1; i++) {
+      for (let j = 0; j < w1; j++) {
         if (grid1[i][j] !== grid2[i][j]) {
           return false;
         }
