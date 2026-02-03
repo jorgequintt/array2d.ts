@@ -2,12 +2,14 @@
   "name": "array2d",
   "version": "0.0.5",
   "description": "Utility library for working with 2D arrays (arrays of arrays) in JavaScript",
-  "main": "Array2D.js",
+  "main": "./dist/Array2D.mjs",
+  "module": "./dist/Array2D.js",
+  "types": "./dist/Array2D.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/Array2D.js",
+      "require": "./dist/Array2D.mjs",
+      "types": "./dist/Array2D.d.ts"
     }
   },
   "repository": {
@@ -15,7 +17,7 @@
     "url": "https://github.com/matthewtoast/Array2D.js.git"
   },
   "scripts": {
-    "build": "tsup Array2D.js --format iife,esm --minify --clean --dts --global-name Array2D"
+    "build": "tsup Array2D.js --format iife,esm,cjs --minify --clean"
   },
   "author": "Matthew Trost",
   "license": "MIT",
