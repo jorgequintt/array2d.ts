@@ -7,13 +7,13 @@ var rename = require('gulp-rename');
 // Dist name
 var distName = 'Array2D';
 
-// Uglify
+// Uglify - Added "return" to signal task completion
 gulp.task('uglify', function() {
-  gulp.src([path.join(__dirname, distName + '.js')])
+  return gulp.src([path.join(__dirname, distName + '.js')])
     .pipe(uglify())
     .pipe(rename(distName + '.min.js'))
     .pipe(gulp.dest(path.join(__dirname, 'dist')));
 });
 
-// Default task: All of the above
-gulp.task('default', ['uglify']);
+// Default task: Wrapped in gulp.series()
+gulp.task('default', gulp.series('uglify'));

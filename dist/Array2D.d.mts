@@ -1458,14 +1458,14 @@
 
   // Return the left column of the grid.
   Array2D.left = function(grid) {
-    let transposed = Array2D.transpose(grid);
+    Array2D.transpose(grid);
 
     return Array2D.top(grid);
   };
 
   // Return the right column of the grid.
   Array2D.right = function(grid) {
-    let transposed = Array2D.transpose(grid);
+    Array2D.transpose(grid);
 
     return Array2D.bottom(grid);
   };
@@ -2170,14 +2170,8 @@
                 group
               );
           }
-        } else {
-          /* The cell did not match; skip. */
         }
-      } else {
-        /* The cell was out-of-bounds; skip. */
       }
-    } else {
-      /* The cell was already checked; skip. */
     }
   }
 
@@ -2292,4 +2286,4 @@
 
     context.putImageData(image, 0, 0);
   };
-}.call(this));
+}.call(undefined));
